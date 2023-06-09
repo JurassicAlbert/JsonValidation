@@ -31,9 +31,9 @@ jobs:
       - name: Validate Json Syntax
         run: |
           python -m pip install --upgrade pip
-          python -c "from JsonValidation.ValidationInitializer import ValidationInitializer; v = ValidationInitializer(); v.run_json_syntax_validator();"
+          python -c "from JsonValidation import ValidationInitializer; v = ValidationInitializer(); v.run_json_syntax_validator();"
 
       - name: Validate Json Structure
         run: |
           python -m pip install --upgrade pip
-          python -c "from JsonValidation.ValidationInitializer import ValidationInitializer; v = ValidationInitializer(); v.run_json_structure_validator()"
+          python -c "from JsonValidation import ValidationInitializer; v = ValidationInitializer(); v.run_json_structure_validator()"
