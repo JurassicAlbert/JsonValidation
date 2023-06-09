@@ -1,7 +1,7 @@
 {
   "name": "Example JSON",
   "version": "1.0",
-  "description": "This is an example JSON file with sections and comments.",
+  "description": "This is an example JSON file with missing comma.",
   "sections": [
     {
       "title": "Section 1",
