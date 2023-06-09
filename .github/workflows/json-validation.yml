@@ -22,7 +22,7 @@ jobs:
         python-version: '3.11'
 
     - name: Install jsonlint
-      run: pip install jsonlint-cli
+      run: pip install jsonlint
 
     - name: Lint JSON Files
       run: |
