@@ -29,7 +29,8 @@ jobs:
 
       - name: Lint JSON Files
         run: |
-          find . -name '*.json' -type f -exec python -m json.tool {} \; > /dev/null
+          find . -name '*.json' -type f -exec sh -c 'python -m json.tool {} >&2' \;
+
 
 
       - name: Run Python Script
