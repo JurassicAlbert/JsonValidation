@@ -29,8 +29,8 @@ jobs:
 
       - name: Lint JSON Files
         run: |
-          find . -name '*.json' -type f -exec python -c "import json5, sys; f=open(sys.argv[1]); json5.load(f); f.close()" {} \;
-
+          find . -name '*.json' -type f -exec python -c "import json5, sys; f=open(sys.argv[1]); json5.load(f, verbose=True); f.close()" {} \;
+      
       - name: Run Python Script
         run: |
           python -m pip install --upgrade pip
