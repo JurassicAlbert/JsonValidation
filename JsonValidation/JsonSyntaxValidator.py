@@ -11,7 +11,7 @@ class JsonSyntaxValidator:
             for file in files:
                 if file.endswith('.json'):
                     file_path = os.path.join(root, file)
-                    command = f'jsonlint {file_path}'
+                    command = f'jq {file_path}'
                     result = subprocess.run(command, shell=True, capture_output=True, text=True)
                     if result.returncode != 0:
                         error_message = result.stderr.strip()
