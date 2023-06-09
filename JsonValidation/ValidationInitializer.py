@@ -1,6 +1,6 @@
 import os
-from JsonSyntaxValidator import JsonSyntaxValidator
-from JsonStructureValidator import JsonStructureValidator
+import JsonSyntaxValidator
+import JsonStructureValidator
 
 
 class ValidationInitializer:
