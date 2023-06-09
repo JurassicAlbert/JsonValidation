@@ -1,6 +1,6 @@
 import os
 import subprocess
-
+import json5
 
 class JsonSyntaxValidator:
     def __init__(self, directory):

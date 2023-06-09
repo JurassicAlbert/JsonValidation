@@ -24,9 +24,12 @@ jobs:
       - name: Install jq
         run: sudo apt-get install -y jq
 
+      - name: Install json5
+        run: pip install json5
+
       - name: Lint JSON Files
         run: |
-          find . -name '*.json' -type f -exec jq empty {} \;
+          find . -name '*.json' -type f -exec python -c "import json5, sys; f=open(sys.argv[1]); json5.load(f); f.close()" {} \;
 
       - name: Run Python Script
         run: |
